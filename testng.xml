@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="SeleniumGridParalllel">
+                <methods>
+                    <include name="chromeAmazonTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="SeleniumGridParalllel">
+                <methods>
+                    <include name="firefoxAmazonTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
